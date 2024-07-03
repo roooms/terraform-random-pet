@@ -37,7 +37,7 @@ This Terraform configuration generates a random pet name using the `random` prov
 
 The `random_pet` resource is configured to generate a name with:
 
-- Length: 2 words
+- Length: 2 words (default)
 - Separator: hyphen ("-")
 
 You can modify these settings in the `random_pet` resource block if desired.
