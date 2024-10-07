@@ -33,6 +33,10 @@ This Terraform configuration generates a random pet name using the `random` prov
    terraform output pet_name
    ```
 
+## Examples
+
+Examples are available in the [examples](examples) directory.
+
 ## Configuration
 
 The `random_pet` resource is configured to generate a name with:
