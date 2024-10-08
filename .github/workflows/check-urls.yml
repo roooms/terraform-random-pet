@@ -31,6 +31,6 @@ jobs:
         run: |
           # Add your script execution command here
           # python your_script.py
-        env:
+        # env:
           # Add any environment variables your script needs
           # SECRET_KEY: ${{ secrets.SECRET_KEY }}
