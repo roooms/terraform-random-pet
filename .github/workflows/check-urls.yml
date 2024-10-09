@@ -2,35 +2,17 @@ name: Check URLs
 
 on:
   push:
-    branches: [ main ]
+    paths:
+      - '**.md'
   pull_request:
-    branches: [ main ]
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    paths:
+      - '**.md'
 
 jobs:
-  run-script:
+  validate:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: roooms/gha-md-link-check@v1
         with:
-          python-version: '3.x'
-      
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          # Add your dependencies here
-          # pip install -r requirements.txt
-      
-      - name: Run script
-        run: |
-          # Add your script execution command here
-          # python your_script.py
-        # env:
-          # Add any environment variables your script needs
-          # SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          directory: '.'
