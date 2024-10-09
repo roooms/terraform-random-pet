@@ -35,7 +35,7 @@ This Terraform configuration generates a random pet name using the `random` prov
 
 ## Examples
 
-Examples are available in the [examples](examples) directory.
+Examples are available in the [examples](./examples) directory.
 
 ## Configuration
 
